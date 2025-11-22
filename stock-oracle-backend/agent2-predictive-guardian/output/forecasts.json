@@ -1,0 +1,842 @@
+[
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 1,
+    "predicted_demand": 78.33
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 2,
+    "predicted_demand": 78.52
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 3,
+    "predicted_demand": 84.22
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 4,
+    "predicted_demand": 84.81
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 5,
+    "predicted_demand": 92.97
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 6,
+    "predicted_demand": 98.22
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 7,
+    "predicted_demand": 83.99
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 8,
+    "predicted_demand": 80.93
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 9,
+    "predicted_demand": 78.69
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 10,
+    "predicted_demand": 84.14
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 11,
+    "predicted_demand": 84.14
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 12,
+    "predicted_demand": 92.51
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 13,
+    "predicted_demand": 89.62
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 14,
+    "predicted_demand": 83.83
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 15,
+    "predicted_demand": 75.48
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 16,
+    "predicted_demand": 75.21
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 17,
+    "predicted_demand": 77.96
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 18,
+    "predicted_demand": 78.86
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 19,
+    "predicted_demand": 82.84
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 20,
+    "predicted_demand": 83.27
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 21,
+    "predicted_demand": 68.56
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 22,
+    "predicted_demand": 72.82
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 23,
+    "predicted_demand": 74.16
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 24,
+    "predicted_demand": 68.88
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 25,
+    "predicted_demand": 76.0
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 26,
+    "predicted_demand": 78.85
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 27,
+    "predicted_demand": 76.19
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 28,
+    "predicted_demand": 73.76
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 29,
+    "predicted_demand": 73.36
+  },
+  {
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "day": 30,
+    "predicted_demand": 72.92
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 1,
+    "predicted_demand": 73.59
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 2,
+    "predicted_demand": 78.72
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 3,
+    "predicted_demand": 86.7
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 4,
+    "predicted_demand": 90.84
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 5,
+    "predicted_demand": 98.34
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 6,
+    "predicted_demand": 96.94
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 7,
+    "predicted_demand": 87.96
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 8,
+    "predicted_demand": 84.12
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 9,
+    "predicted_demand": 77.81
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 10,
+    "predicted_demand": 86.8
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 11,
+    "predicted_demand": 85.11
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 12,
+    "predicted_demand": 87.18
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 13,
+    "predicted_demand": 93.72
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 14,
+    "predicted_demand": 83.56
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 15,
+    "predicted_demand": 76.96
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 16,
+    "predicted_demand": 76.17
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 17,
+    "predicted_demand": 76.36
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 18,
+    "predicted_demand": 84.5
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 19,
+    "predicted_demand": 89.8
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 20,
+    "predicted_demand": 84.08
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 21,
+    "predicted_demand": 79.52
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 22,
+    "predicted_demand": 72.13
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 23,
+    "predicted_demand": 70.79
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 24,
+    "predicted_demand": 77.79
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 25,
+    "predicted_demand": 76.87
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 26,
+    "predicted_demand": 80.24
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 27,
+    "predicted_demand": 86.36
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 28,
+    "predicted_demand": 70.65
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 29,
+    "predicted_demand": 71.82
+  },
+  {
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "day": 30,
+    "predicted_demand": 72.23
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 1,
+    "predicted_demand": 81.42
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 2,
+    "predicted_demand": 84.11
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 3,
+    "predicted_demand": 81.88
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 4,
+    "predicted_demand": 83.55
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 5,
+    "predicted_demand": 89.51
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 6,
+    "predicted_demand": 96.59
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 7,
+    "predicted_demand": 90.47
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 8,
+    "predicted_demand": 82.32
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 9,
+    "predicted_demand": 81.69
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 10,
+    "predicted_demand": 81.84
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 11,
+    "predicted_demand": 87.17
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 12,
+    "predicted_demand": 83.39
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 13,
+    "predicted_demand": 90.91
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 14,
+    "predicted_demand": 84.08
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 15,
+    "predicted_demand": 78.41
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 16,
+    "predicted_demand": 76.11
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 17,
+    "predicted_demand": 75.81
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 18,
+    "predicted_demand": 82.65
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 19,
+    "predicted_demand": 85.19
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 20,
+    "predicted_demand": 84.53
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 21,
+    "predicted_demand": 78.04
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 22,
+    "predicted_demand": 70.09
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 23,
+    "predicted_demand": 70.1
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 24,
+    "predicted_demand": 69.36
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 25,
+    "predicted_demand": 76.9
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 26,
+    "predicted_demand": 82.16
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 27,
+    "predicted_demand": 83.02
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 28,
+    "predicted_demand": 75.5
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 29,
+    "predicted_demand": 78.21
+  },
+  {
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "day": 30,
+    "predicted_demand": 75.11
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 1,
+    "predicted_demand": 70.82
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 2,
+    "predicted_demand": 77.16
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 3,
+    "predicted_demand": 83.1
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 4,
+    "predicted_demand": 91.16
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 5,
+    "predicted_demand": 94.73
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 6,
+    "predicted_demand": 86.42
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 7,
+    "predicted_demand": 83.13
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 8,
+    "predicted_demand": 79.29
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 9,
+    "predicted_demand": 80.89
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 10,
+    "predicted_demand": 80.44
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 11,
+    "predicted_demand": 89.26
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 12,
+    "predicted_demand": 98.7
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 13,
+    "predicted_demand": 91.17
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 14,
+    "predicted_demand": 81.96
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 15,
+    "predicted_demand": 76.56
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 16,
+    "predicted_demand": 77.15
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 17,
+    "predicted_demand": 79.81
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 18,
+    "predicted_demand": 87.83
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 19,
+    "predicted_demand": 89.44
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 20,
+    "predicted_demand": 80.78
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 21,
+    "predicted_demand": 77.35
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 22,
+    "predicted_demand": 70.45
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 23,
+    "predicted_demand": 67.94
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 24,
+    "predicted_demand": 77.2
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 25,
+    "predicted_demand": 79.01
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 26,
+    "predicted_demand": 84.96
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 27,
+    "predicted_demand": 80.93
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 28,
+    "predicted_demand": 79.48
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 29,
+    "predicted_demand": 70.71
+  },
+  {
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "day": 30,
+    "predicted_demand": 78.1
+  }
+]

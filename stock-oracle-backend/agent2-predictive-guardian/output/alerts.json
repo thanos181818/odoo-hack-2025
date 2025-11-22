@@ -1,0 +1,46 @@
+[
+  {
+    "severity": "critical",
+    "agent": "PredictiveGuardian",
+    "sku": "STEEL-001",
+    "product": "Steel Sheets",
+    "location": "Rack B2",
+    "current_stock": 113,
+    "7day_demand": 601,
+    "reorder_qty": 768,
+    "message": "Steel Sheets at Rack B2 will RUN OUT in less than 7 days!\nCurrent: 113 \u2192 7-day need: 601 \u2192 REORDER 768 units IMMEDIATELY!"
+  },
+  {
+    "severity": "critical",
+    "agent": "PredictiveGuardian",
+    "sku": "CHAIR-001",
+    "product": "Office Chair",
+    "location": "Warehouse A",
+    "current_stock": 123,
+    "7day_demand": 613,
+    "reorder_qty": 770,
+    "message": "Office Chair at Warehouse A will RUN OUT in less than 7 days!\nCurrent: 123 \u2192 7-day need: 613 \u2192 REORDER 770 units IMMEDIATELY!"
+  },
+  {
+    "severity": "critical",
+    "agent": "PredictiveGuardian",
+    "sku": "CEMENT-001",
+    "product": "Cement Bags",
+    "location": "Dock 3",
+    "current_stock": 118,
+    "7day_demand": 608,
+    "reorder_qty": 769,
+    "message": "Cement Bags at Dock 3 will RUN OUT in less than 7 days!\nCurrent: 118 \u2192 7-day need: 608 \u2192 REORDER 769 units IMMEDIATELY!"
+  },
+  {
+    "severity": "critical",
+    "agent": "PredictiveGuardian",
+    "sku": "PAINT-001",
+    "product": "Industrial Paint",
+    "location": "Chemical Zone",
+    "current_stock": 124,
+    "7day_demand": 587,
+    "reorder_qty": 742,
+    "message": "Industrial Paint at Chemical Zone will RUN OUT in less than 7 days!\nCurrent: 124 \u2192 7-day need: 587 \u2192 REORDER 742 units IMMEDIATELY!"
+  }
+]

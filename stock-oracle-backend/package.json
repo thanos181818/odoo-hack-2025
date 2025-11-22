@@ -16,7 +16,14 @@
       "db:seed": "tsx src/db/seed.ts",
       "setup": "npm run db:push && npm run db:generate && tsx scripts/setup-db.ts && npm run db:seed",
       "embeddings": "tsx scripts/seed-embeddings.ts",
+<<<<<<< HEAD
       "test": "tsx scripts/test-agent.ts",
+=======
+      "process-m5": "tsx scripts/process-m5-data.ts",
+      "train-lstm": "tsx scripts/train-lstm.ts",
+      "test": "tsx scripts/test-agent.ts",
+      "test-forecast": "tsx scripts/test-forecast.ts",
+>>>>>>> 576cb152caf702b03de0153e2095af72bfeefbed
       "lint": "eslint src --ext .ts"
     },
     "dependencies": {
@@ -37,7 +44,16 @@
       "winston": "^3.11.0",
       "helmet": "^7.1.0",
       "express-rate-limit": "^7.1.5",
+<<<<<<< HEAD
       "uuid": "^9.0.1"
+=======
+      "uuid": "^9.0.1",
+      "node-cron": "^3.0.3",
+      "@tensorflow/tfjs-node": "^4.14.0",
+      "papaparse": "^5.4.1",
+      "mathjs": "^12.2.0",
+      "lodash": "^4.17.21"
+>>>>>>> 576cb152caf702b03de0153e2095af72bfeefbed
     },
     "devDependencies": {
       "@types/express": "^4.17.21",
@@ -47,6 +63,12 @@
       "@types/bcrypt": "^5.0.2",
       "@types/uuid": "^9.0.7",
       "@types/pg": "^8.10.9",
+<<<<<<< HEAD
+=======
+      "@types/node-cron": "^3.0.11",
+      "@types/papaparse": "^5.3.14",
+      "@types/lodash": "^4.14.202",
+>>>>>>> 576cb152caf702b03de0153e2095af72bfeefbed
       "prisma": "^5.22.0",
       "tsx": "^4.7.0",
       "typescript": "^5.3.3",
