@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Boxes, ArrowRight, UserPlus } from "lucide-react"
+import { Boxes, ArrowRight, UserPlus, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,11 +20,13 @@ import {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { mockUsers } from "@/lib/mock-data"
 import type { User } from "@/lib/types"
+import { saveAuth } from "@/lib/utils/auth"
 
 export default function LoginPage() {
   const router = useRouter()
   const [email, setEmail] = useState("admin@stockmaster.com")
   const [password, setPassword] = useState("password123")
+  const [isLoading, setIsLoading] = useState(false)
   const [isRegisterOpen, setIsRegisterOpen] = useState(false)
   const [registerData, setRegisterData] = useState({
     loginId: "",
@@ -34,11 +36,31 @@ export default function LoginPage() {
     role: "STAFF" as User["role"],
   })
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In a real app, this would validate against a backend
-    // For now, just redirect to dashboard
-    router.push("/dashboard")
+    setIsLoading(true)
+
+    try {
+      const res = await fetch("http://localhost:3000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        saveAuth(data.data.user, data.data.token)
+        router.push("/dashboard")
+      } else {
+        alert(data.message || "Login failed")
+      }
+    } catch (error) {
+      console.error(error)
+      alert("Connection error. Is the backend running on port 3000?")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleRegister = (e: React.FormEvent) => {
@@ -104,9 +126,10 @@ export default function LoginPage() {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? <Loader2 className="mr-2 size-4 animate-spin" /> : null}
               Sign In
-              <ArrowRight className="ml-2 size-4" />
+              {!isLoading && <ArrowRight className="ml-2 size-4" />}
             </Button>
           </form>
         </CardContent>

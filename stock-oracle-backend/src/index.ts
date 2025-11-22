@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import { createServer } from 'http';
 import { Server as SocketServer } from 'socket.io';
 import rateLimit from 'express-rate-limit';
+import path from 'path';
 
 import { config } from './config/env';
 import { connectDatabase, disconnectDatabase } from './config/database';
@@ -13,7 +14,7 @@ import { errorHandler } from './api/middleware/errorHandler';
 
 // Routes
 import chatRoutes from './api/routes/chat';
-import authRoutes from './api/routes/auth'; // <--- IMPORT THIS
+import authRoutes from './api/routes/auth'; 
 
 const app = express();
 const httpServer = createServer(app);
@@ -49,8 +50,14 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
-app.use('/api/auth', authRoutes); // <--- REGISTER AUTH ROUTE
+app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
+
+// --- NEW: Serve Agent 2 (Guardian) Data ---
+// This exposes the JSON output from the Python predictive agent
+const guardianOutputPath = path.join(__dirname, '../agent2-predictive-guardian/output');
+app.use('/api/guardian', express.static(guardianOutputPath));
+// ------------------------------------------
 
 // Error handling
 app.use(errorHandler);

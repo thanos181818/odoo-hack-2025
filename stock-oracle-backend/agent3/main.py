@@ -1,10 +1,20 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware 
 from pydantic import BaseModel
 from datetime import datetime
 import pandas as pd
-from agent3 import AnomalySentinel, generate_normal_data # Import your class
+from agent3 import AnomalySentinel, generate_normal_data 
 
 app = FastAPI()
+
+# Enable CORS for frontend communication
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # 1. Initialize the Brain
 print("Initializing Agent 3...")
@@ -38,4 +48,4 @@ def analyze(trx: TransactionRequest):
     
     return result
 
-# Run with: uv run uvicorn main:app --reload
+# Run with: uv run uvicorn main:app --reload --port 8000
