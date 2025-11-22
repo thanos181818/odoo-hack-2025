@@ -1,10 +1,10 @@
 # Odoo Hack 2025
 
-## 👨‍💻 Team Members
+## Team Members
 - **Sahil Mehta**
 - **Raj Mathuria**
 - **Palash Shah**
 - **Reyansh Mehta**
 
-## 🧑‍🏫 Reviewer
+## Reviewer
 - **Aman Patel**
