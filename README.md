@@ -10,7 +10,7 @@
 - **Aman Patel**
 
 ## Video Link
-
+https://drive.google.com/drive/folders/1Dhb-eGut8ded265uEG_fEm41Cs6ptLUS?usp=sharing
 
 ## 1. Project Overview
 StockMaster is a real-time, multi-warehouse inventory management system that goes beyond traditional digitization of manual processes. It introduces an **autonomous inventory brain** powered by three specialized AI agents and Retrieval-Augmented Generation (RAG) that actively predict, prevent, and resolve issues before human intervention is required.
