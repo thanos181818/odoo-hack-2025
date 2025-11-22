@@ -1,7 +1,7 @@
-import { config } from 'dotenv';
+import dotenv from "dotenv";
 import { z } from 'zod';
 
-config();
+dotenv.config();
 
 const envSchema = z.object({
   // Server
