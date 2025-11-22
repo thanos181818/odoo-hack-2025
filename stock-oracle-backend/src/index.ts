@@ -13,19 +13,21 @@ import { errorHandler } from './api/middleware/errorHandler';
 
 // Routes
 import chatRoutes from './api/routes/chat';
+import authRoutes from './api/routes/auth'; // <--- IMPORT THIS
 
 const app = express();
 const httpServer = createServer(app);
 const io = new SocketServer(httpServer, {
   cors: {
-    origin: config.server.corsOrigin,
+    origin: '*', // Allow all origins for hackathon simplicity
     methods: ['GET', 'POST'],
   },
 });
 
 // Middleware
 app.use(helmet());
-app.use(cors({ origin: config.server.corsOrigin }));
+// Allow all CORS for easier frontend integration during hackathon
+app.use(cors({ origin: '*' })); 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
@@ -47,6 +49,7 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
+app.use('/api/auth', authRoutes); // <--- REGISTER AUTH ROUTE
 app.use('/api/chat', chatRoutes);
 
 // Error handling
@@ -86,7 +89,7 @@ async function start() {
     // Test LLM connection
     const llmConnected = await testLLMConnection();
     if (!llmConnected) {
-      logger.warn('⚠️  LLM connection test failed, but continuing...');
+      logger.warn('⚠️  LLM connection test failed, but continuing in Fallback Mode...');
     }
 
     // Start server
