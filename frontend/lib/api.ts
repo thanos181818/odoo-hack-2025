@@ -1,7 +1,7 @@
 import { getAuth } from "./utils/auth"
 
-const API_URL = "http://localhost:3000/api"
-const SENTINEL_URL = "http://localhost:8000"
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api"
+const SENTINEL_URL = process.env.NEXT_PUBLIC_SENTINEL_URL || "http://localhost:8000"
 
 export async function fetchAPI(endpoint: string, options: RequestInit = {}) {
   const auth = getAuth()
