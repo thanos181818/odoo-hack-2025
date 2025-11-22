@@ -1,5 +1,6 @@
 import { DynamicStructuredTool } from '@langchain/core/tools';
 import { z } from 'zod';
+import { Prisma } from '@prisma/client';
 import prisma from '../config/database';
 import { vectorStore } from '../services/vectorStore';
 
@@ -62,15 +63,18 @@ export const getLowStockTool = new DynamicStructuredTool({
     locationName: z.string().optional().describe('Filter by location (optional)'),
   }),
   func: async ({ locationName }) => {
-    let locationFilter = '';
+    let locationClause = Prisma.empty;
+    
     if (locationName) {
       const locations = await vectorStore.searchLocations(locationName, 1);
       if (locations.length > 0) {
-        locationFilter = `AND l.id = '${locations[0].id}'`;
+        // Explicitly construct the SQL part to help TypeScript
+        locationClause = Prisma.sql`AND l.id = ${locations[0].id}::uuid`;
       }
     }
 
-    const lowStock = await prisma.$queryRaw<any[]>`
+    // Construct the full query object first
+    const query = Prisma.sql`
       SELECT 
         p.name, p.sku, l.name as location,
         s.quantity, p."reorderLevel", p.unit,
@@ -78,12 +82,15 @@ export const getLowStockTool = new DynamicStructuredTool({
       FROM "Product" p
       JOIN "Stock" s ON p.id = s."productId"
       JOIN "Location" l ON s."locationId" = l.id
-      WHERE s.quantity < p."reorderLevel" ${locationFilter}
+      WHERE s.quantity < p."reorderLevel" ${locationClause}
       ORDER BY deficit DESC
       LIMIT 20
     `;
 
-    if (lowStock.length === 0) {
+    // Then execute it
+    const lowStock = await prisma.$queryRaw<any[]>(query);
+
+    if (!lowStock || lowStock.length === 0) {
       return 'No items below reorder level';
     }
 
@@ -139,15 +146,17 @@ export const getStockValueTool = new DynamicStructuredTool({
     locationName: z.string().optional().describe('Filter by location (optional)'),
   }),
   func: async ({ locationName }) => {
-    let locationFilter = '';
+    let locationClause = Prisma.empty;
+    
     if (locationName) {
       const locations = await vectorStore.searchLocations(locationName, 1);
       if (locations.length > 0) {
-        locationFilter = `AND l.id = '${locations[0].id}'`;
+        locationClause = Prisma.sql`AND l.id = ${locations[0].id}::uuid`;
       }
     }
 
-    const result = await prisma.$queryRaw<any[]>`
+    // Construct query first to avoid TS errors
+    const query = Prisma.sql`
       SELECT 
         COALESCE(SUM(s.quantity * p."costPrice"), 0) as "totalValue",
         COUNT(DISTINCT p.id) as "productCount",
@@ -155,8 +164,10 @@ export const getStockValueTool = new DynamicStructuredTool({
       FROM "Stock" s
       JOIN "Product" p ON s."productId" = p.id
       JOIN "Location" l ON s."locationId" = l.id
-      WHERE p."costPrice" IS NOT NULL ${locationFilter}
+      WHERE p."costPrice" IS NOT NULL ${locationClause}
     `;
+
+    const result = await prisma.$queryRaw<any[]>(query);
 
     const data = result[0];
     return `Total Stock Value: $${Number(data.totalValue).toFixed(2)}\n` +
