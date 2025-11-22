@@ -1,30 +1,25 @@
-# StockMaster full-stack app
+# StockMaster - Intelligent Inventory Management
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+StockMaster is a next-generation warehouse management system powered by a multi-agent AI architecture. It combines traditional ERP capabilities with predictive analytics and anomaly detection.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/palashs-projects-478a9bfc/v0-stock-master-full-stack-app)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/d5nK4pMUDZP)
+## 🚀 Features
 
-## Overview
+- **Real-time Inventory Tracking**: Monitor stock levels across multiple warehouses.
+- **AI Agent 1 (Stock Oracle)**: Natural language interface for database operations.
+- **AI Agent 2 (Predictive Guardian)**: LSTM-based forecasting to prevent stockouts.
+- **AI Agent 3 (Anomaly Sentinel)**: Fraud and error detection using Isolation Forests.
+- **Role-Based Access**: Secure login for Managers and Staff.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 🛠️ Tech Stack
 
-## Deployment
+- **Frontend**: Next.js 14, Tailwind CSS, Shadcn UI
+- **Backend**: Node.js, Express, Socket.io
+- **AI Engine**: Python (FastAPI, PyTorch, Scikit-Learn)
+- **Database**: PostgreSQL with pgvector
 
-Your project is live at:
+## 🏃‍♂️ Running Locally
 
-**[https://vercel.com/palashs-projects-478a9bfc/v0-stock-master-full-stack-app](https://vercel.com/palashs-projects-478a9bfc/v0-stock-master-full-stack-app)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/d5nK4pMUDZP](https://v0.app/chat/d5nK4pMUDZP)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+1. **Backend**:
+   ```bash
+   cd stock-oracle-backend
+   npm run dev
