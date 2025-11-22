@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Filter, FileDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -10,9 +11,32 @@ import { mockStockMoves, mockProducts, mockLocations } from "@/lib/mock-data"
 import { cn } from "@/lib/utils"
 
 export default function MoveHistoryPage() {
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filterType, setFilterType] = useState("all")
+
+  // Filter logic
+  const filteredMoves = mockStockMoves.filter((move) => {
+    const product = mockProducts.find((p) => p.id === move.productId)
+    const fromLoc = mockLocations.find((l) => l.id === move.fromLocationId)
+    const toLoc = mockLocations.find((l) => l.id === move.toLocationId)
+
+    // 1. Check Search Query (matches Reference, Product Name, or Location Codes)
+    const searchLower = searchQuery.toLowerCase()
+    const matchesSearch =
+      move.reference.toLowerCase().includes(searchLower) ||
+      (product?.name || "").toLowerCase().includes(searchLower) ||
+      (fromLoc?.shortCode || "").toLowerCase().includes(searchLower) ||
+      (toLoc?.shortCode || "").toLowerCase().includes(searchLower)
+
+    // 2. Check Type Filter
+    const matchesType = filterType === "all" || move.type.toLowerCase() === filterType.toLowerCase()
+
+    return matchesSearch && matchesType
+  })
+
   const handleExportLedger = () => {
     const headers = ["Date", "Reference", "Product", "From Location", "To Location", "Quantity", "Type"]
-    const rows = mockStockMoves.map((move) => {
+    const rows = filteredMoves.map((move) => {
       const product = mockProducts.find((p) => p.id === move.productId)
       const fromLoc = mockLocations.find((l) => l.id === move.fromLocationId)
       const toLoc = mockLocations.find((l) => l.id === move.toLocationId)
@@ -57,12 +81,17 @@ export default function MoveHistoryPage() {
 
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2 flex-1 max-w-sm">
-          <Input placeholder="Search reference, product..." className="h-9" />
+          <Input 
+            placeholder="Search reference, product..." 
+            className="h-9"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
           <Button variant="outline" size="icon" className="h-9 w-9 bg-transparent">
             <Filter className="size-4" />
           </Button>
         </div>
-        <Select defaultValue="all">
+        <Select value={filterType} onValueChange={setFilterType}>
           <SelectTrigger className="w-[180px] h-9">
             <SelectValue placeholder="Filter by Type" />
           </SelectTrigger>
@@ -90,66 +119,74 @@ export default function MoveHistoryPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {mockStockMoves.map((move) => {
-              const product = mockProducts.find((p) => p.id === move.productId)
-              const fromLoc = mockLocations.find((l) => l.id === move.fromLocationId)
-              const toLoc = mockLocations.find((l) => l.id === move.toLocationId)
+            {filteredMoves.length > 0 ? (
+              filteredMoves.map((move) => {
+                const product = mockProducts.find((p) => p.id === move.productId)
+                const fromLoc = mockLocations.find((l) => l.id === move.fromLocationId)
+                const toLoc = mockLocations.find((l) => l.id === move.toLocationId)
 
-              return (
-                <TableRow key={move.id}>
-                  <TableCell className="whitespace-nowrap text-muted-foreground text-xs">
-                    {new Date(move.createdAt).toLocaleString()}
-                  </TableCell>
-                  <TableCell className="font-medium">{move.reference}</TableCell>
-                  <TableCell>{product?.name}</TableCell>
-                  <TableCell>
-                    {fromLoc ? (
-                      <Badge variant="outline" className="font-mono text-xs">
-                        {fromLoc.shortCode}
-                      </Badge>
-                    ) : (
-                      <span className="text-muted-foreground">-</span>
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    {toLoc ? (
-                      <Badge variant="outline" className="font-mono text-xs">
-                        {toLoc.shortCode}
-                      </Badge>
-                    ) : (
-                      <span className="text-muted-foreground">-</span>
-                    )}
-                  </TableCell>
-                  <TableCell
-                    className={cn(
-                      "text-right font-mono font-medium",
-                      move.type === "RECEIPT"
-                        ? "text-success"
-                        : move.type === "DELIVERY"
-                          ? "text-destructive"
-                          : "text-foreground",
-                    )}
-                  >
-                    {move.type === "DELIVERY" || (move.type === "ADJUSTMENT" && move.qty < 0) ? "" : "+"}
-                    {move.qty}
-                  </TableCell>
-                  <TableCell>
-                    <Badge
-                      variant="secondary"
+                return (
+                  <TableRow key={move.id}>
+                    <TableCell className="whitespace-nowrap text-muted-foreground text-xs">
+                      {new Date(move.createdAt).toLocaleString()}
+                    </TableCell>
+                    <TableCell className="font-medium">{move.reference}</TableCell>
+                    <TableCell>{product?.name}</TableCell>
+                    <TableCell>
+                      {fromLoc ? (
+                        <Badge variant="outline" className="font-mono text-xs">
+                          {fromLoc.shortCode}
+                        </Badge>
+                      ) : (
+                        <span className="text-muted-foreground">-</span>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      {toLoc ? (
+                        <Badge variant="outline" className="font-mono text-xs">
+                          {toLoc.shortCode}
+                        </Badge>
+                      ) : (
+                        <span className="text-muted-foreground">-</span>
+                      )}
+                    </TableCell>
+                    <TableCell
                       className={cn(
-                        "rounded-sm font-normal",
-                        move.type === "RECEIPT" && "bg-success/10 text-success hover:bg-success/20",
-                        move.type === "DELIVERY" && "bg-destructive/10 text-destructive hover:bg-destructive/20",
-                        move.type === "TRANSFER" && "bg-primary/10 text-primary hover:bg-primary/20",
-                        move.type === "ADJUSTMENT" && "bg-warning/10 text-warning hover:bg-warning/20",
+                        "text-right font-mono font-medium",
+                        move.type === "RECEIPT"
+                          ? "text-success"
+                          : move.type === "DELIVERY"
+                            ? "text-destructive"
+                            : "text-foreground",
                       )}
                     >
-                      {move.type}
-                    </Badge>
-                  </TableCell>
-                </TableRow>
-              )
-            })}
+                      {move.type === "DELIVERY" || (move.type === "ADJUSTMENT" && move.qty < 0) ? "" : "+"}
+                      {move.qty}
+                    </TableCell>
+                    <TableCell>
+                      <Badge
+                        variant="secondary"
+                        className={cn(
+                          "rounded-sm font-normal",
+                          move.type === "RECEIPT" && "bg-success/10 text-success hover:bg-success/20",
+                          move.type === "DELIVERY" && "bg-destructive/10 text-destructive hover:bg-destructive/20",
+                          move.type === "TRANSFER" && "bg-primary/10 text-primary hover:bg-primary/20",
+                          move.type === "ADJUSTMENT" && "bg-warning/10 text-warning hover:bg-warning/20",
+                        )}
+                      >
+                        {move.type}
+                      </Badge>
+                    </TableCell>
+                  </TableRow>
+                )
+              })
+            ) : (
+              <TableRow>
+                <TableCell colSpan={7} className="h-24 text-center text-muted-foreground">
+                  No moves found matching your criteria.
+                </TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </div>
