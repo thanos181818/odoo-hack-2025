@@ -1,4 +1,5 @@
-import prisma from '../config/database';
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 import bcrypt from 'bcrypt';
 import { logger } from '../utils/logger';
 

@@ -2,6 +2,9 @@
     "name": "stock-oracle-backend",
     "version": "1.0.0",
     "description": "AI-powered warehouse management agent with RAG + pgvector",
+    "prisma": {
+      "schema": "src/db/schema.prisma"
+    },
     "main": "dist/index.js",
     "scripts": {
       "dev": "tsx watch src/index.ts",
