@@ -36,3 +36,42 @@ prisma/migrations/*/migration.sql
 # Testing
 coverage/
 .nyc_output/
+
+
+# --- Python & uv Virtual Environment ---
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- uv specific ---
+# Keep uv.lock if you want to lock versions, otherwise ignore it. 
+# Usually, you KEEP uv.lock, so do NOT ignore it.
+
+# --- Environment Variables (Secrets) ---
+.env
+.env.local
+.env.*.local
+
+# --- Frontend (Node/JS) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.next/
+out/
+
+# --- System & IDEs ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# --- Logs ---
+*.log
